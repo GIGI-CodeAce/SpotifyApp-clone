@@ -2,6 +2,17 @@
 function getTrackList() {
     let songCount = 0;
 
+    const AlbumInfo = [
+    {
+        name: 'I AM MUSIC',
+        artist: 'Playboi carti',
+        album: true,
+        date: [7, ' Nov'],
+        year: 2007,
+        label: '00pium',
+    }
+]
+
     const trackList = [
         { name: 'Cmon', id: songCount++, 
         duration: '4:01', plays: 316977 },
@@ -17,7 +28,10 @@ function getTrackList() {
         duration: '4:59', plays: 16977 },
     ];
 
-    return trackList; 
+    return{
+        AlbumInfo,
+        trackList,
+    }
 }
 
 export default getTrackList;

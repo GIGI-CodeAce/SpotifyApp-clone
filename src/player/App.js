@@ -6,21 +6,27 @@ import Album from './album';
 import Footer from './footerTrack';
 
 function App() {
-  const trackList = getTrackList();
+  const { trackList, AlbumInfo } = getTrackList();
+
+  const selectedAlbum = AlbumInfo[0];
 
   return (
     <>
-    <Album/>
-    <Info/>
-    <main>
-    {trackList.map((item) => (
-  <Track
-    key={item.id}
-    {...item}
-  />
-))}
-    </main>
-    <Footer/>
+      <Album
+      {...selectedAlbum}
+      />
+      <Info />
+      <main>
+        {trackList.map((item) => (
+          <Track
+            key={item.id}
+            {...item}
+          />
+        ))}
+      </main>
+      <Footer
+        {...selectedAlbum}
+      />
     </>
   );
 }
