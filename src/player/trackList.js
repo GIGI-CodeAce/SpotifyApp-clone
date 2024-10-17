@@ -2,17 +2,6 @@
 function getTrackList() {
     let songCount = 0;
 
-    const AlbumInfo = [
-    {
-        name: 'I AM MUSIC',
-        artist: 'Playboi carti',
-        album: true,
-        date: [7, ' Nov'],
-        year: 2007,
-        label: '00pium',
-    }
-]
-
     const trackList = [
         { name: 'Cmon', id: songCount++, 
         duration: '4:01', plays: 316977 },
@@ -27,6 +16,18 @@ function getTrackList() {
         { name: 'Get busy', id: songCount++, 
         duration: '4:59', plays: 16977 },
     ];
+
+    const AlbumInfo = [
+        {
+            name: 'I AM STILL WATER',
+            artist: 'Playboi carti',
+            album: true,
+            date: [7, ' Nov'],
+            year: 2024,
+            label: '00pium',
+            songs: songCount
+        }
+    ]
 
     return{
         AlbumInfo,

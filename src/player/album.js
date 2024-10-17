@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function Album({ name, artist, album }) { // Destructure props
+function Album(props) {
   const [image, setImage] = useState('');
 
   const handleImageSelect = (e) => {
@@ -35,9 +35,9 @@ function Album({ name, artist, album }) { // Destructure props
         </div>
 
         {/* Song title */}
-        <div className="absolute ml-72 mt-10 w-6 h-6 text-white">{album ? 'Album' : 'Single'}</div>
-        <div className="absolute ml-72 mt-20 text-3xl sm:text-5xl text-white">{name}</div>
-        <div className="absolute ml-72 mt-36 text-xl text-white">{artist}</div>
+        <div className="absolute ml-72 mt-10 w-6 h-6 text-white">{props.album ? 'Album' : 'Single'}</div>
+        <div className="absolute ml-72 mt-20 text-3xl sm:text-5xl text-white">{props.name}</div>
+        <div className="absolute ml-72 mt-36 text-md text-white">{props.artist} • {props.year} • {props.songs} songs</div>
       </div>
 
       <br />

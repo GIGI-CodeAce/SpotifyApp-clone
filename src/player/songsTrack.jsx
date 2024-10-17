@@ -18,6 +18,7 @@ function Track(props) {
     <div>
       <ol className="hover:cursor-pointer border-4 border-black bg-black">
         <li
+          onClick={props.onClick}
           className={liStyle}
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
