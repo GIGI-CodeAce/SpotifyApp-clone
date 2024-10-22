@@ -25,7 +25,7 @@ function getTrackList() {
 
     const AlbumInfo = [
         {
-            name: 'AN ALBUM NAME',
+            name: 'Type a name',
             artist: 'Artist',
             album: true,
             date: [7, ' Nov'],
