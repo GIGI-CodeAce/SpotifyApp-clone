@@ -1,12 +1,8 @@
 import React from 'react';
+import { AlbumProps } from './album';
 
-interface footerProps{
-    date: string,
-    year: number,
-    label: string,
-}
 
-function Footer(props: footerProps){
+function Footer(props: AlbumProps){
 
     return(
         <div className=" text-white opacity-[40%] ml-4 mt-3 h-40 leading-4">

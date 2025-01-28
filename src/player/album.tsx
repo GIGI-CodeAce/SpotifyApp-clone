@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 
-interface AlbumProps {
+export interface AlbumProps {
+  id: number,
   name: string;
   artist: string;
   album: boolean;
-  date: string; // Changed from String to string
+  date: string;
   year: number;
   label: string;
   songs: number;

@@ -1,6 +1,14 @@
 import React, { useState } from 'react';
 
-function Track(props) {
+interface TrackProps{
+  name: string,
+  id: null, 
+  duration: string,
+  plays: number,
+  onClick: any,
+}
+
+function Track(props: TrackProps) {
   const liStyle = " rounded-md odd:bg-gray-800 text-white even:bg-gray-700 py-2 px-2 active:bg-gray-700 relative h-11";
   const [hoveredSongid, setHoveredSongid] = useState(null);
 
