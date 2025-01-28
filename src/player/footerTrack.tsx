@@ -1,6 +1,12 @@
 import React from 'react';
 
-function Footer(props){
+interface footerProps{
+    date: string,
+    year: number,
+    label: string,
+}
+
+function Footer(props: footerProps){
 
     return(
         <div className=" text-white opacity-[40%] ml-4 mt-3 h-40 leading-4">
