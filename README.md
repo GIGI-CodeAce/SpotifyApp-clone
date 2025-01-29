@@ -1,11 +1,11 @@
 
-<h1 align="center" id="title">Memes Generator</h1>
+<h1 align="center" id="title">SpotifyApp Clone</h1>
 
 <p align="center">
   <img src="stfy/src/mdMedia/spotify.png" alt="project-image">
 </p>
 
-<p id="description">
+<p align="center" id="description">
 A clone of spotify album tracklist theme made w/ react,tailwind,typescript.
 </p>
 
@@ -45,7 +45,7 @@ A clone of spotify album tracklist theme made w/ react,tailwind,typescript.
 ```
 <h2 align="center">Project Screenshot:</h2>
 <div align="center">
-  <img src="/src/mdMedia/nameCover.png" alt="project-screenshot" style="width: 60%; height: 400px">
+  <img src="/src/mdMedia/nameCover.png" alt="project-screenshot" style="width: 100%; height: 400px">
 </div><br></br>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-62b1ff?style=for-the-badge&logo=web&logoColor=white)](https://www.gigicodeace.com)
