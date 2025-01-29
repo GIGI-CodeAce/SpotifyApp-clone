@@ -1,5 +1,5 @@
 
-function getTrackList() {
+function AlbumData() {
     let songCount = 0;
 
     const trackList = [
@@ -41,4 +41,4 @@ function getTrackList() {
     }
 }
 
-export default getTrackList;
+export default AlbumData;
