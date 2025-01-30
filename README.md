@@ -2,8 +2,7 @@
 <h1 align="center" id="title">SpotifyApp Clone</h1>
 
 <p align="center">
-  <img src="https://github.com/GIGIsOtherStuff/mainWebMedia/raw/main/AppImages/myProjectsImgs/spotify.png"
-  style="max-width: 60%; height: auto;" 
+  <img src="https://github.com/GIGIsOtherStuff/mainWebMedia/raw/main/AppImages/myProjectsImgs/spotify.png" style="width: 60%; height: auto;" 
    alt="project-image">
 </p>
 
@@ -47,7 +46,7 @@ A clone of spotify album tracklist theme made w/ react,tailwind,typescript.
 ```
 <h2 align="center">Project Screenshot:</h2>
 <div align="center">
-  <img src="/src/mdMedia/nameCover.png" alt="project-screenshot" style="width: 60%; height: 300px">
+  <img src="/src/mdMedia/nameCover.png" alt="project-screenshot" style="width: 80%; height: 300px">
 </div><br></br>
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-62b1ff?style=for-the-badge&logo=web&logoColor=white)](https://www.gigicodeace.com)
