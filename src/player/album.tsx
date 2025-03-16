@@ -14,6 +14,7 @@ export interface AlbumProps {
 function Album(props: AlbumProps) {
   const [image, setImage] = useState('');
   const [like, setLike] = useState(false);
+  const [play, setPlay] = useState(false)
 
   const handleImageSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
@@ -26,6 +27,10 @@ function Album(props: AlbumProps) {
     }
   };
 
+  function HandlePlay(){
+    setPlay((old)=> !old)
+  }
+
   const openFilePicker = () => {
     const imageInput = document.getElementById('imageInput') as HTMLInputElement;
     imageInput.click();
@@ -36,7 +41,7 @@ function Album(props: AlbumProps) {
   };
 
   return (
-    <div className="relative bg-gradient-to-b from-slate-700 via-black to-black h-80 overflow-hidden">
+    <div className="relative bg-gradient-to-b pt-2 from-slate-700 via-black to-black h-80 overflow-hidden">
       <div className="inline-flex">
         {/* Photo */}
         <div
@@ -71,8 +76,8 @@ function Album(props: AlbumProps) {
       <main className="relative">
         <div className="inline-flex h-16 border-4 rounded-full border-green-500 bg-green-500 w-16 m-4">
           <abbr title="Play">
-            <span className="text-black hover:cursor-pointer select-none">
-              <span className="material-symbols-outlined text-[58px]">play_arrow</span>
+            <span onClick={HandlePlay} className="text-black hover:cursor-pointer select-none">
+              <span className="material-symbols-outlined text-[58px]">{play ? 'pause' : 'play_arrow'}</span>
             </span>
           </abbr>
         </div>

@@ -5,6 +5,7 @@ import Info from './player/infoTab';
 import Album from './player/album';
 import Footer from './player/footerTrack';
 import SongOverview from './playingStatus/songOverview';
+import NavigationBar from "./navBar/nav"
 
 function App() {
   const { trackList, AlbumInfo } = albumData();
@@ -18,6 +19,7 @@ function App() {
 
   return (
     <>
+      <NavigationBar/>
       <SongOverview 
         artist={selectedAlbum.artist} 
         name={selectedSong.name}
