@@ -31,7 +31,7 @@ const Album = ({ album }: Props) => {
         ></div>
 
         <div className="absolute font-semibold ml-60 sm:ml-72 mt-10 w-6 h-6 text-white">Album</div>
-        <div className="absolute font-semibold ml-60 mt-[89px] sm:mt-20 xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl sm:ml-72 text-white max-w-[400px] overflow-hidden whitespace-nowrap uppercase">
+        <div className="absolute font-semibold ml-60 mt-[89px] sm:mt-20 xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl sm:ml-72 text-white max-w-[500px] overflow-hidden whitespace-nowrap uppercase">
           {album.name}
         </div>
         <div className="absolute ml-60 sm:ml-72 mt-36 text-xs text-white md:text-2xl sm:text-xl">
@@ -43,32 +43,30 @@ const Album = ({ album }: Props) => {
         <div className="inline-flex h-16 border-4 rounded-full border-green-500 bg-green-500 w-16 m-4">
           <abbr title="Play">
             <span onClick={handlePlay} className="text-black hover:cursor-pointer select-none">
-              <span className="material-symbols-outlined text-[58px]">{play ? 'pause' : 'play_arrow'}</span>
+              <span className="material-symbols-outlined !text-[58px]">{play ? 'pause' : 'play_arrow'}</span>
             </span>
           </abbr>
         </div>
 
         <abbr title="Shuffle">
           <span className="text-white absolute mt-6 left-12 hover:cursor-pointer select-none">
-            <span className="material-symbols-outlined text-[50px] absolute left-11">shuffle</span>
+            <span className="material-symbols-outlined !text-[50px] absolute left-11">shuffle</span>
           </span>
         </abbr>
 
         <abbr title={like ? 'Unsave' : 'Save'}>
           <span onClick={toggleLike} className="text-white absolute mt-6 left-40 hover:cursor-pointer select-none">
-            <span className="material-symbols-outlined text-[50px]">
+            <span className="material-symbols-outlined !text-[50px]">
               {like ? 'check_circle' : 'add_circle'}
             </span>
           </span>
         </abbr>
 
-        <abbr title={like ? 'Unsave' : 'Save'}>
-          <span onClick={handleNewAlbum} className="text-white absolute mt-6 left-40 hover:cursor-pointer select-none">
-            Get New Album
+          <span title='Get new album' onClick={handleNewAlbum} className="text-white absolute mt-6 left-55 hover:cursor-pointer select-none">
+            <span className="material-symbols-outlined !text-[50px] text-green-500">
+              autorenew
+            </span>
           </span>
-        </abbr>
-
-
 
         <span className="text-white absolute right-2 mt-11 mr-2 hover:cursor-pointer select-none">
           <span className="material-symbols-outlined text-3xl">list</span>
