@@ -8,6 +8,7 @@ interface Props {
 const Album = ({ album }: Props) => {
   const [like, setLike] = useState(false);
   const [play, setPlay] = useState(false);
+  const [shuffle, setShuffle] = useState(false)
 
   const handlePlay = () => setPlay(prev => !prev);
   const toggleLike = () => setLike(prev => !prev);
@@ -31,7 +32,7 @@ const Album = ({ album }: Props) => {
         ></div>
 
         <div className="absolute font-semibold ml-60 sm:ml-72 mt-10 w-6 h-6 text-white">Album</div>
-        <div className="absolute font-semibold ml-60 mt-[89px] sm:mt-20 xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl sm:ml-72 text-white max-w-[500px] overflow-hidden whitespace-nowrap uppercase">
+        <div className="absolute font-semibold ml-60 mt-[89px] sm:mt-20 xl:text-5xl lg:text-4xl md:text-3xl sm:text-3xl sm:ml-72 text-white max-w-[250px] sm:max-w-[400px] md:max-w-[669px] overflow-hidden whitespace-nowrap truncate uppercase">
           {album.name}
         </div>
         <div className="absolute ml-60 sm:ml-72 mt-36 text-xs text-white md:text-2xl sm:text-xl">
@@ -49,7 +50,7 @@ const Album = ({ album }: Props) => {
         </div>
 
         <abbr title="Shuffle">
-          <span className="text-white absolute mt-6 left-12 hover:cursor-pointer select-none">
+          <span onClick={()=> setShuffle((old)=> !old)} className={`absolute mt-6 left-12 hover:cursor-pointer select-none ${shuffle ? 'text-green-500' : 'text-white'}`}>
             <span className="material-symbols-outlined !text-[50px] absolute left-11">shuffle</span>
           </span>
         </abbr>
@@ -62,11 +63,13 @@ const Album = ({ album }: Props) => {
           </span>
         </abbr>
 
-          <span title='Get new album' onClick={handleNewAlbum} className="text-white absolute mt-6 left-55 hover:cursor-pointer select-none">
-            <span className="material-symbols-outlined !text-[50px] text-green-500">
-              autorenew
-            </span>
+        <span title="Get new album" onClick={handleNewAlbum}
+        className="text-white absolute mt-6 left-57 cursor-pointer select-none">
+        <span className="material-symbols-outlined !text-[50px] text-green-500 hover:animate-spin">
+        autorenew
           </span>
+        </span>
+
 
         <span className="text-white absolute right-2 mt-11 mr-2 hover:cursor-pointer select-none">
           <span className="material-symbols-outlined text-3xl">list</span>
