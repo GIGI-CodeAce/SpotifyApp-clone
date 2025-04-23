@@ -1,7 +1,6 @@
 // useAlbumData.ts
 import { useEffect, useState } from "react";
 import axios from "axios";
-// import { AlbumProps } from "./albumData"; // make sure this interface matches your backend response
 
 export interface Track {
     name: string;
@@ -15,6 +14,8 @@ export interface Track {
     image: string;
     release_date: string;
     track_count: number;
+    spotify_url: string;
+
     tracks: Track[];
   }
 

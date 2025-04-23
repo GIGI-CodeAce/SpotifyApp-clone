@@ -1,8 +1,8 @@
-// AlbumPage.tsx
 import useAlbumData from "./albumData";
 import Album from "./album";
 import TrackList from "./songsTrack";
 import Info from "./infoTab";
+import LoadingPlaceholder from "../loadingPlaceholder";
 
 const AlbumPage = () => {
   const album = useAlbumData();
@@ -16,7 +16,7 @@ const AlbumPage = () => {
           <TrackList album={album} />
         </>
       ) : (
-        <p className="text-white">Loading album...</p>
+        <LoadingPlaceholder/>
       )}
     </div>
   );

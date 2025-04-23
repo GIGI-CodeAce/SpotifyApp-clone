@@ -3,6 +3,13 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 let token = null;
+const randMarket = ['GB', 'US']
+
+const getRandomItemFromArray = (array) => {
+  const randomIndex = Math.floor(Math.random() * array.length);
+  return array[randomIndex];
+};
+
 
 async function getAccessToken() {
   try {
@@ -33,7 +40,7 @@ export async function getRandomAlbum() {
     if (!token) await getAccessToken();
 
     const res = await axios.get(
-      `https://api.spotify.com/v1/browse/new-releases?limit=34&market=GB`,
+      `https://api.spotify.com/v1/browse/new-releases?limit=34&market=${getRandomItemFromArray(randMarket)}`,
       {
         headers: { Authorization: `Bearer ${token}` },
       }
@@ -54,7 +61,6 @@ export async function getRandomAlbum() {
       const tracks = tracksRes.data.items;
 
       if (tracks.length >= 9) {
-        // Get artist info
         const artistRes = await axios.get(
           `https://api.spotify.com/v1/artists/${album.artists[0].id}`,
           {
@@ -69,6 +75,9 @@ export async function getRandomAlbum() {
           release_date: album.release_date.split('-')[0],
           track_count: tracks.length,
           artist: artistRes.data.name,
+          label: album.label, 
+          spotify_url: album.external_urls.spotify,
+          label: album.label,
           tracks: tracks.map((track) => ({
             name: track.name,
             duration_min: (track.duration_ms / 60000).toFixed(2),
