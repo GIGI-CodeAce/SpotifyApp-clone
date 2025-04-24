@@ -2,9 +2,10 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
 
+
 export interface Track {
     name: string;
-    duration_min: number;
+    duration_min: string;
   }
   
   export interface AlbumProps {
@@ -12,7 +13,8 @@ export interface Track {
     name: string;
     artist: string;
     image: string;
-    release_date: string;
+    year_date: string;
+    date: string;
     track_count: number;
     spotify_url: string;
 
@@ -27,7 +29,7 @@ const useAlbumData = (): AlbumProps | null => {
 
   useEffect(() => {
     if (!album) {
-      axios.get("http://localhost:3000/api/random-album")
+      axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/random-album`)
         .then((res) => {
           setAlbum(res.data);
           localStorage.setItem("album", JSON.stringify(res.data));

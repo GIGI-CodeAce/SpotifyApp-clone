@@ -7,6 +7,10 @@ body{
   border: 1px solid red;
 } */
 
+::selection{
+  background-color: hsl(120, 100%, 30%);
+}
+
 ::-webkit-scrollbar {
   padding: 10px;
   border-radius: 10px;

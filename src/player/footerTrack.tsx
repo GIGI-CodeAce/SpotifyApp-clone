@@ -1,16 +1,14 @@
-// import React from 'react';
-// import { AlbumProps } from './album';
 
-// props: AlbumProps
 
-function Footer(){
+import { AlbumProps } from "./albumData"
+
+const Footer = ({ album }: { album: AlbumProps }) => {
 
     return(
         <div className=" text-white opacity-[40%] ml-4 mt-3 h-40 leading-4">
-            {/* <span className="">{props.date} {props.year}</span><br/>
-
-            <span className="text-xs">©{props.year} {props.label}</span> */}
-            <span className='flex justify-end pr-1'>v1.2.0</span>
+            <span className="">{album.date}</span>
+            <span className="text-xs">©{album.year_date} {album.name}</span><br/>
+            <span className='flex justify-end pr-1'>v1.4.5</span>
 
         </div>
     )

@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 let token = null;
-const randMarket = ['GB', 'US']
+const randMarket = ['GB', 'US', 'DE']
 
 const getRandomItemFromArray = (array) => {
   const randomIndex = Math.floor(Math.random() * array.length);
@@ -72,21 +72,20 @@ export async function getRandomAlbum() {
           id: album.id,
           name: album.name,
           image: album.images[0].url,
-          release_date: album.release_date.split('-')[0],
+          year_date: album.release_date.split('-')[0],
+          date: album.release_date,
           track_count: tracks.length,
           artist: artistRes.data.name,
-          label: album.label, 
           spotify_url: album.external_urls.spotify,
-          label: album.label,
           tracks: tracks.map((track) => ({
             name: track.name,
-            duration_min: (track.duration_ms / 60000).toFixed(2),
+            duration_min: (track.duration_ms / 60000).toFixed(2).toString().replace('.',':'),
           })),
         };
       }
     }
 
-    throw new Error("No album with at least 7 tracks found.");
+    throw new Error("No album with at least 9 tracks found.");
   } catch (err) {
     console.error("Failed to fetch album:", err.response?.data || err.message);
     throw err;

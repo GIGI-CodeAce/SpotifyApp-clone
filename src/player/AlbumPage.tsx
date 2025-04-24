@@ -3,6 +3,7 @@ import Album from "./album";
 import TrackList from "./songsTrack";
 import Info from "./infoTab";
 import LoadingPlaceholder from "../loadingPlaceholder";
+import Footer from "./footerTrack";
 
 const AlbumPage = () => {
   const album = useAlbumData();
@@ -14,6 +15,7 @@ const AlbumPage = () => {
           <Album album={album} />
           <Info />
           <TrackList album={album} />
+          <Footer album={album} />
         </>
       ) : (
         <LoadingPlaceholder/>

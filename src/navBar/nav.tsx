@@ -1,6 +1,6 @@
 function NavigationBar() {
     return (
-        <nav className="flex items-center justify-between p-2 bg-slate-700">
+        <nav className="flex items-center justify-between p-2 bg-slate-700 pb-5">
             <div className="text-gray-400 hover:text-white active:text-red-300 cursor-pointer bg-black p-[10px] pb-1 pt-2 rounded-[50%]">
                 <span
                     className="material-symbols-outlined select-none"

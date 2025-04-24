@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 interface Song {
   name: string;
-  duration: number;
+  duration: string;
   plays: number;
 }
 
@@ -17,7 +17,6 @@ const TrackList = ({ album }: { album: AlbumProps }) => {
         duration: track.duration_min,
         plays: Math.floor(Math.random() * 99999 + 100000),
       }));
-      console.log(album);
       setSongs(trackList);
     }
   }, [album]);
@@ -30,10 +29,10 @@ const TrackList = ({ album }: { album: AlbumProps }) => {
     songs.map((song, index) => (
       <li
         key={index}
-        className="rounded-md hover:[&::marker]:content-['\25B6'] bg-[#1f2937] mb-1 text-white py-2 pr-2 pl-4 active:bg-gray-700 hover:bg-green-950 h-11 relative"
+        className="rounded-md hover:[&::marker]:content-['▶'] bg-[#1f2937] mb-1 text-white py-2 pr-2 pl-4 active:bg-gray-700 hover:bg-green-950 h-11 relative"
       >
 
-        <span className="ml-1 select-none inline-block max-w-[200px] sm:max-w-[500px] truncate">
+        <span className="ml-1 inline-block max-w-[200px] sm:max-w-[500px] truncate">
           {song.name}
         </span>
 
