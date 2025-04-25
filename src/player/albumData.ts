@@ -29,7 +29,7 @@ const useAlbumData = (): AlbumProps | null => {
 
   useEffect(() => {
     if (!album) {
-      axios.get(`${import.meta.env.VITE_BACKEND_URL}/api/random-album`)
+      axios.get(`${import.meta.env.VITE_BACKEND_URL}`)
         .then((res) => {
           setAlbum(res.data);
           localStorage.setItem("album", JSON.stringify(res.data));

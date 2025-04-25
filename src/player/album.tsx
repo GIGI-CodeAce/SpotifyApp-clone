@@ -33,38 +33,32 @@ const Album = ({ album }: Props) => {
         ></div>
         </a>
 
-        <div className="absolute font-semibold ml-60 sm:ml-72 mt-10 w-6 h-6 text-white">Album</div>
+        <div className="absolute font-semibold ml-58 sm:ml-72 mt-10 w-6 h-6 text-white">Album</div>
         <a href={album.spotify_url} target='_blank' className='absolute'>
-        <div className="absolute font-semibold ml-60 mt-[89px] hover:underline sm:mt-20 xl:text5xl lg:text-4xl md:text-3xl sm:text-3xl sm:ml-72 text-xl text-white max-w-[250px] sm:max-w-[400px] md:max-w-[669px] overflow-hidden whitespace-nowrap truncate uppercase">
+        <div className="absolute font-semibold ml-57 mt-[89px] hover:underline sm:mt-20 xl:text5xl lg:text-4xl md:text-3xl sm:text-3xl sm:ml-72 text-lg text-white max-w-[250px] sm:max-w-[400px] md:max-w-[669px] overflow-hidden whitespace-nowrap truncate uppercase">
           {album.name}
         </div></a>
-        <div className="absolute ml-60 sm:ml-72 opacity-70 mt-36 text-xs text-white md:text-2xl sm:text-xl">
+        <div className="absolute ml-57 sm:ml-72 opacity-70 mt-36 text-xs text-white md:text-2xl sm:text-xl">
           {album.artist} • {album.year_date} • {album.track_count} songs
         </div>
       </div>
 
       <main className="relative">
-        <div className="inline-flex h-16 border-4 rounded-full border-green-500 bg-green-500 w-16 m-4">
-          <abbr title="Play">
-            <span onClick={handlePlay} className="text-black hover:cursor-pointer select-none">
+        <div className="inline-flex border-4 rounded-full border-green-500 bg-green-500 w-16 h-16 m-4">
+            <span title='Play' onClick={handlePlay} className="text-black hover:cursor-pointer select-none">
               <span className="material-symbols-outlined !text-[58px]">{play ? 'pause' : 'play_arrow'}</span>
             </span>
-          </abbr>
         </div>
 
-        <abbr title="Shuffle">
-          <span onClick={()=> setShuffle((old)=> !old)} className={`absolute mt-6 left-12 hover:cursor-pointer select-none ${shuffle ? 'text-green-500' : 'text-white'}`}>
+          <span title='Shuffle' onClick={()=> setShuffle((old)=> !old)} className={`absolute mt-6 left-12 hover:cursor-pointer select-none ${shuffle ? 'text-green-500' : 'text-white'}`}>
             <span className="material-symbols-outlined !text-[50px] absolute left-11">shuffle</span>
           </span>
-        </abbr>
 
-        <abbr title={like ? 'Unsave' : 'Save'}>
-          <span onClick={toggleLike} className="text-white absolute mt-6 left-40 hover:cursor-pointer select-none">
+          <span title={like ? 'Unsave' : 'Save'} onClick={toggleLike} className="text-white absolute mt-6 left-40 hover:cursor-pointer select-none">
             <span className="material-symbols-outlined !text-[50px]">
               {like ? 'check_circle' : 'add_circle'}
             </span>
           </span>
-        </abbr>
 
         <span title="Get new album" onClick={handleNewAlbum}
         className="text-white absolute mt-6 left-57 cursor-pointer select-none">

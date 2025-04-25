@@ -15,7 +15,7 @@ const TrackList = ({ album }: { album: AlbumProps }) => {
       const trackList = album.tracks.map(track => ({
         name: track.name,
         duration: track.duration_min,
-        plays: Math.floor(Math.random() * 99999 + 100000),
+        plays: Math.floor(Math.random() * 999999),
       }));
       setSongs(trackList);
     }
@@ -28,6 +28,7 @@ const TrackList = ({ album }: { album: AlbumProps }) => {
   {songs.length > 0 ? (
     songs.map((song, index) => (
       <li
+        title={song.name}
         key={index}
         className="rounded-md hover:[&::marker]:content-['▶'] bg-[#1f2937] mb-1 text-white py-2 pr-2 pl-4 active:bg-gray-700 hover:bg-green-950 h-11 relative"
       >
@@ -46,7 +47,10 @@ const TrackList = ({ album }: { album: AlbumProps }) => {
       </li>
     ))
   ) : (
-    <p className="text-white px-4 py-2">No songs available</p>
+    <div className="text-gray-500 flex-col text-center justify-center mt-20">
+    <h1 className="text-4xl">˙◠˙</h1>
+    <p className="text-xl">No songs available</p>
+  </div>
   )}
 </ol>
 
