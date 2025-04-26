@@ -9,6 +9,7 @@ body{
 
 ::selection{
   background-color: hsl(120, 100%, 30%);
+  color: black;
 }
 
 ::-webkit-scrollbar {

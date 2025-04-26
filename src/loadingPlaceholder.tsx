@@ -3,7 +3,7 @@ function LoadingPlaceholder(){
     return(
       <>
               <div className="relative bg-gradient-to-b pt-2 mb-4 from-slate-700 via-black to-black h-80 overflow-hidden">
-        <div className="inline-flex">
+              <div className="inline-flex">
         <div
             className="h-52 cursor-pointer sm:h-56 sm:w-56 w-48 bg-slate-800 animate-pulse ml-4 rounded-lg border-1 shadow-md "
           ></div>
@@ -30,6 +30,7 @@ function LoadingPlaceholder(){
           </div>
   
             <span className={`absolute mt-6 left-24 top-[-9px] h-16 w-16 rounded-3xl bg-slate-700 animate-pulse`}>
+              {/* Save */}
             </span>
   
             <span className="absolute mt-6 left-45 top-[-9px] h-16 w-16 rounded-xl bg-slate-700 animate-pulse">
@@ -38,7 +39,7 @@ function LoadingPlaceholder(){
           <span title="Get new album"
           className=" absolute mt-6 left-57 cursor-pointer rounded-2xl bg-slate-700 animate-pulse">
           <span className="material-symbols-outlined text-green-500 hover:animate-spin">
-          
+            {/* Generate */}
             </span>
           </span>
   
@@ -55,43 +56,43 @@ function LoadingPlaceholder(){
     </div>
       <ol className="list-disc list-outside marker:text-slate-700 pr-2 pl-5 ml-1 border-4 border-black bg-black">
           <li
-            className="rounded-md bg-[hsl(215,28%,14%)] mb-1 py-2 pr-2 pl-4 h-11 relative">
+            className="rounded-md bg-[hsl(215,28%,14%)] mb-2 py-2 pr-2 pl-4 h-11 relative">
             <span className="ml-1 animate-pulse w-30 sm:w-40 h-6 bg-slate-700 rounded-xl inline-block max-w-[200px] sm:max-w-[500px] truncate"></span>
             <span className="absolute right-[35%] w-20 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
             <span className="absolute right-[10%] sm:w-20 w-15 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
           </li>
           <li
-            className="rounded-md bg-[hsl(215,28%,14%)] mb-1 py-2 pr-2 pl-4 h-11 relative">
+            className="rounded-md bg-[hsl(215,28%,14%)] mb-2 py-2 pr-2 pl-4 h-11 relative">
             <span className="ml-1 animate-pulse w-30 sm:w-40 h-6 bg-slate-700 rounded-xl inline-block max-w-[200px] sm:max-w-[500px] truncate"></span>
             <span className="absolute right-[35%] w-20 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
             <span className="absolute right-[10%] sm:w-20 w-15 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
           </li>
           <li
-            className="rounded-md bg-[hsl(215,28%,14%)] mb-1 py-2 pr-2 pl-4 h-11 relative">
+            className="rounded-md bg-[hsl(215,28%,14%)] mb-2 py-2 pr-2 pl-4 h-11 relative">
             <span className="ml-1 animate-pulse w-30 sm:w-40 h-6 bg-slate-700 rounded-xl inline-block max-w-[200px] sm:max-w-[500px] truncate"></span>
             <span className="absolute right-[35%] w-20 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
             <span className="absolute right-[10%] sm:w-20 w-15 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
           </li>
           <li
-            className="rounded-md bg-[hsl(215,28%,14%)] mb-1 py-2 pr-2 pl-4 h-11 relative">
+            className="rounded-md bg-[hsl(215,28%,14%)] mb-2 py-2 pr-2 pl-4 h-11 relative">
             <span className="ml-1 animate-pulse w-30 sm:w-40 h-6 bg-slate-700 rounded-xl inline-block max-w-[200px] sm:max-w-[500px] truncate"></span>
             <span className="absolute right-[35%] w-20 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
             <span className="absolute right-[10%] sm:w-20 w-15 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
           </li>
           <li
-            className="rounded-md bg-[hsl(215,28%,14%)] mb-1 py-2 pr-2 pl-4 h-11 relative">
+            className="rounded-md bg-[hsl(215,28%,14%)] mb-2 py-2 pr-2 pl-4 h-11 relative">
             <span className="ml-1 animate-pulse w-30 sm:w-40 h-6 bg-slate-700 rounded-xl inline-block max-w-[200px] sm:max-w-[500px] truncate"></span>
             <span className="absolute right-[35%] w-20 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
             <span className="absolute right-[10%] sm:w-20 w-15 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
           </li>
           <li
-            className="rounded-md bg-[hsl(215,28%,14%)] mb-1 py-2 pr-2 pl-4 h-11 relative">
+            className="rounded-md bg-[hsl(215,28%,14%)] mb-2 py-2 pr-2 pl-4 h-11 relative">
             <span className="ml-1 animate-pulse w-30 sm:w-40 h-6 bg-slate-700 rounded-xl inline-block max-w-[200px] sm:max-w-[500px] truncate"></span>
             <span className="absolute right-[35%] w-20 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
             <span className="absolute right-[10%] sm:w-20 w-15 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
           </li>
           <li
-            className="rounded-md bg-[hsl(215,28%,14%)] mb-1 py-2 pr-2 pl-4 h-11 relative">
+            className="rounded-md bg-[hsl(215,28%,14%)] mb-2 py-2 pr-2 pl-4 h-11 relative">
             <span className="ml-1 animate-pulse w-30 sm:w-40 h-6 bg-slate-700 rounded-xl inline-block max-w-[200px] sm:max-w-[500px] truncate"></span>
             <span className="absolute right-[35%] w-20 h-6 bg-slate-700 rounded-xl animate-pulse"></span>
             <span className="absolute right-[10%] sm:w-20 w-15 h-6 bg-slate-700 rounded-xl animate-pulse"></span>

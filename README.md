@@ -1,54 +1,50 @@
-# React + TypeScript + Vite
+<h1 align="center">SpotifyApp-clone v1.5.0</h1>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/myProjectsImgs/spotify.png" width="40%" height="60%" alt="project-image">
+</p>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+ <strong>SpotifyApp</strong> — A clone of Spotify’s album tracklist page, built with React, Tailwind CSS, and TypeScript. It uses an API to fetch and display random albums, complete with tracklists and detailed album information.
+</p>
 
-Currently, two official plugins are available:
+<h2 align="center">Visit here</h2>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div align="center">
+  <a href="https://spotifyapp-api.onrender.com">SpotifyApp.onrender.com</a>
+</div>
 
-## Expanding the ESLint configuration
+<h2 align="center">🧐 Features</h2>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+<h4>Here're some of the project's best features</h4>
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+**Dynamic Album Fetching:** Random albums with full details are fetched using a custom API.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+**Detailed Album Pages:** Displays album covers, artist names, release dates, and complete tracklists.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+**Track Playback UI:** An album track list layout mimicking Spotify’s theme.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+**Fully Responsive Design:** Optimized with Tailwind CSS for smooth experience across all devices.
+
+**TypeScript Integration:** Strong typing for safer, more maintainable code.
+
+**Custom API Integration:** Backend built to serve random album data to the frontend.
+
+  
+<h2 align="center">Project Screenshots:</h2>
+<div align="center">
+<div>
+  <img src="./src/mdMedia/layout.png" alt="project-screenshot" width="500" height="550">
+</div>
+<hr/>
+<img src="./src/mdMedia/loading.png" alt="project-screenshot" width="500" height="550">
+
+</div><br></br>
+
+[![Portfolio](https://img.shields.io/badge/Portfolio-62b1ff?style=for-the-badge&logo=web&logoColor=white)](https://www.gigicodeace.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-3e3eff?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/dobre-robert-03653b331/)
+[![GitHub](https://img.shields.io/badge/GitHub-2f2f2f?style=for-the-badge&logo=github&logoColor=white)](https://github.com/GIGI-CodeAce)
+[![CSS Battles](https://img.shields.io/badge/CSS%20Battles-ff6e96?style=for-the-badge&logo=css3&logoColor=white)](https://cssbattle.dev/player/gigi)
+
+  <br/>
+   <h4>~GIGI <code>Dore Robert</code></h4>
+</footer>

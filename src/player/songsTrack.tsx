@@ -30,7 +30,7 @@ const TrackList = ({ album }: { album: AlbumProps }) => {
       <li
         title={song.name}
         key={index}
-        className="rounded-md hover:[&::marker]:content-['▶'] bg-[#1f2937] mb-1 text-white py-2 pr-2 pl-4 active:bg-gray-700 hover:bg-green-950 h-11 relative"
+        className="rounded-md hover:[&::marker]:content-['▶'] bg-[#1f2937] mb-2 text-white py-2 pr-2 pl-4 active:bg-gray-700 hover:bg-green-950 h-11 relative"
       >
 
         <span className="ml-1 inline-block max-w-[200px] sm:max-w-[500px] truncate">
