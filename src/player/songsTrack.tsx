@@ -31,11 +31,12 @@ const TrackList = ({ album }: { album: AlbumProps }) => {
         key={index}
         className="group rounded-md bg-[#1f2937] mb-2 text-white py-2 pr-2 pl-4 active:bg-gray-700 hover:bg-green-950 h-11 relative flex items-center"
       >
-        <span className="mr-5 text-gray-400 select-none group-hover:hidden">{index + 1}</span>
+<span className={`text-gray-400 select-none ${index > 8 ? 'mr-3' : 'mr-4 ml-1'} group-hover:hidden`}>{index+1}</span>
 
-        <span className="mr-5 hidden text-green-500 group-hover:inline font-mono select-none">▶</span>
 
-        <span className="ml-1 inline-block max-w-[200px] sm:max-w-[500px] truncate">
+        <span className={`mr-4 hidden text-green-500 group-hover:inline font-mono select-none`}>▶</span>
+
+        <span className={`sm:ml-1 inline-block max-w-[190px] md:max-w-[500px] sm:max-w-[350px] truncate`}>
           {song.name}
         </span>
 
