@@ -47,7 +47,6 @@ export async function getRandomAlbum() {
     );
 
     const albums = res.data.albums.items;
-    
     const shuffled = albums.sort(() => 0.5 - Math.random());
 
     for (const album of shuffled) {
@@ -67,6 +66,7 @@ export async function getRandomAlbum() {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
+        
 
         return {
           id: album.id,

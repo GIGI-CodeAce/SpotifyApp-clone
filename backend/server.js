@@ -20,6 +20,7 @@ app.get("/api/random-album", async (req, res) => {
   }
 });
 
+
 console.log("CLIENT_ID:", process.env.SPOTIFY_CLIENT_ID);
 console.log("CLIENT_SECRET:", process.env.SPOTIFY_CLIENT_SECRET);
 
