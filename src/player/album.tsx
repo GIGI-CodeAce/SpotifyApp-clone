@@ -33,12 +33,12 @@ const Album = ({ album }: Props) => {
         ></div>
         </a>
 
-        <div className="absolute font-semibold ml-58 sm:ml-72 mt-10 w-6 h-6 text-white">Album</div>
+        <div className="absolute font-semibold ml-56 sm:ml-72 mt-10 w-6 h-6 text-white">Album</div>
         <a href={album.spotify_url} target='_blank' className='absolute'>
-        <div className="absolute font-semibold ml-57 mt-[89px] hover:underline sm:mt-20 xl:text5xl lg:text-4xl md:text-3xl sm:text-3xl sm:ml-72 text-lg text-white max-w-[250px] sm:max-w-[400px] md:max-w-[669px] overflow-hidden whitespace-nowrap truncate uppercase">
+        <div className="absolute font-semibold ml-55 mt-[89px] hover:underline sm:mt-20 xl:text5xl lg:text-4xl md:text-3xl sm:text-3xl sm:ml-72 text-lg text-white max-w-[250px] sm:max-w-[400px] md:max-w-[669px] overflow-hidden whitespace-nowrap truncate uppercase">
           {album.name}
         </div></a>
-        <div className="absolute ml-57 sm:ml-72 opacity-70 mt-36 text-xs text-white md:text-2xl sm:text-xl">
+        <div className="absolute ml-55 sm:ml-72 opacity-70 mt-36 text-xs text-white md:text-2xl sm:text-xl">
           {album.artist} • {album.year_date} • {album.track_count} songs
         </div>
       </div>

@@ -21,6 +21,7 @@ const TrackList = ({ album }: { album: AlbumProps }) => {
     }
   }, [album]);
 
+
   return (
 <div>
 <ol className="marker:text-green-500 pr-1 ml-2 hover:cursor-pointer border-4 border-black bg-black">
@@ -36,7 +37,7 @@ const TrackList = ({ album }: { album: AlbumProps }) => {
 
         <span className={`mr-4 hidden text-green-500 group-hover:inline font-mono select-none`}>▶</span>
 
-        <span className={`sm:ml-1 inline-block max-w-[190px] md:max-w-[500px] sm:max-w-[350px] truncate`}>
+        <span className={`sm:ml-1 inline-block max-w-[155px] md:max-w-[500px] sm:max-w-[330px] truncate`}>
           {song.name}
         </span>
 

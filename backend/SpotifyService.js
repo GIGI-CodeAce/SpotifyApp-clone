@@ -3,15 +3,20 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 let token = null;
-const randMarket = ['GB', 'US', 'DE']
+let tokenExpiresAt = 0;
+const randMarket = ['GB', 'US', 'DE'];
 
 const getRandomItemFromArray = (array) => {
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 };
 
-
 async function getAccessToken() {
+  const now = Date.now();
+
+  // If we already have a valid token, reuse it
+  if (token && now < tokenExpiresAt) return token;
+
   try {
     const res = await axios.post(
       "https://accounts.spotify.com/api/token",
@@ -27,7 +32,10 @@ async function getAccessToken() {
         },
       }
     );
+
     token = res.data.access_token;
+    tokenExpiresAt = now + res.data.expires_in * 1000 - 5000; // 5 second buffer
+    console.log("🔁 Access token refreshed.");
     return token;
   } catch (err) {
     console.error("Failed to get access token:", err.response?.data || err.message);
@@ -37,7 +45,7 @@ async function getAccessToken() {
 
 export async function getRandomAlbum() {
   try {
-    if (!token) await getAccessToken();
+    const token = await getAccessToken();
 
     const res = await axios.get(
       `https://api.spotify.com/v1/browse/new-releases?limit=34&market=${getRandomItemFromArray(randMarket)}`,
@@ -66,7 +74,6 @@ export async function getRandomAlbum() {
             headers: { Authorization: `Bearer ${token}` },
           }
         );
-        
 
         return {
           id: album.id,
@@ -79,7 +86,7 @@ export async function getRandomAlbum() {
           spotify_url: album.external_urls.spotify,
           tracks: tracks.map((track) => ({
             name: track.name,
-            duration_min: (track.duration_ms / 60000).toFixed(2).toString().replace('.',':'),
+            duration_min: (track.duration_ms / 60000).toFixed(2).replace('.', ':'),
           })),
         };
       }
