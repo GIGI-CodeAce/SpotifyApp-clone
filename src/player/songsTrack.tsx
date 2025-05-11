@@ -9,6 +9,7 @@ interface Song {
 
 const TrackList = ({ album }: { album: AlbumProps }) => {
   const [songs, setSongs] = useState<Song[]>([]);
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   useEffect(() => {
     if (album && album.tracks) {
@@ -28,14 +29,23 @@ const TrackList = ({ album }: { album: AlbumProps }) => {
   {songs.length > 0 ? (
     songs.map((song, index) => (
       <li
+        onTouchStart={() => setActiveIndex(index)}
+        onMouseEnter={() => setActiveIndex(index)}
+        onMouseLeave={() => setActiveIndex(null)}
         title={song.name}
         key={index}
         className="group rounded-md bg-[#1f2937] mb-2 text-white py-2 pr-2 pl-4 active:bg-gray-700 hover:bg-green-950 h-11 relative flex items-center"
       >
-<span className={`text-gray-400 select-none ${index > 8 ? 'mr-3' : 'mr-4 ml-1'} group-hover:hidden`}>{index+1}</span>
+        <span
+            className={`text-gray-400 select-none ${index > 8 ? 'mr-3' : 'mr-4 ml-1'} ${
+            activeIndex === index ? 'hidden' : 'group-hover:hidden'}`}>
+            {index + 1}</span>
 
+        <span
+          className={`mr-4 text-green-500 font-mono select-none ${
+            activeIndex === index ? 'inline' : 'hidden group-hover:inline'}`}>
+            ▶</span>
 
-        <span className={`mr-4 hidden text-green-500 group-hover:inline font-mono select-none`}>▶</span>
 
         <span className={`sm:ml-1 inline-block max-w-[155px] md:max-w-[500px] sm:max-w-[330px] truncate`}>
           {song.name}

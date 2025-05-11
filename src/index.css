@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 body{
-  overflow-x: hidden;
+  overflow-x:hidden;
   background-color: black;
 }
 /* *{
@@ -18,7 +18,7 @@ body{
   border-radius: 10px;
   width: 9px;
 }
-
+ 
 ::-webkit-scrollbar-thumb {
   background-color: hsl(210, 29%, 26%)
   ;

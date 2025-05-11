@@ -18,9 +18,11 @@ function LoadingPlaceholder(){
           <div className="absolute bg-slate-800 h-6 w-18 rounded-xl animate-pulse sm:ml-72 ml-55 mt-36 ">
              {/* Artist name */}
           </div>
-          <div className="absolute bg-slate-800 w-13 h-6 animate-pulse rounded-xl sm:ml-92 ml-80 mt-36 ">
+          <div className="absolute bg-slate-800 w-13 h-6 animate-pulse rounded-xl sm:ml-92 ml-75 mt-36 ">
+            {/* Date */}
           </div>
           <div className="absolute bg-slate-800 w-10 h-6 animate-pulse hidden sm:block rounded-xl sm:ml-[429px] ml-95 mt-36 ">
+            {/* Songs */}
              </div>
         </div>
   

@@ -1,4 +1,4 @@
-<h1 align="center">SpotifyApp-clone v1.5.0</h1>
+<h1 align="center">SpotifyApp-clone v1.5.2</h1>
 <p align="center">
   <img src="https://raw.githubusercontent.com/GIGIsOtherStuff/mainWebMedia/main/AppImages/myProjectsImgs/spotify.png" width="40%" height="60%" alt="project-image">
 </p>

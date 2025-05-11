@@ -8,10 +8,11 @@ const Footer = ({ album }: { album: AlbumProps }) => {
             <span className="hover:text-green-400">{album.date}</span><br/>
             <span className="hover:text-green-400 text-xs">©{album.year_date} {album.name}</span><br/><br/><hr/><br/>
             <div className="leading-6 inline-grid">
-            <span className='hover:text-green-400 w-[10000px]'>v1.5.1</span>
-            <span className='hover:text-green-400'>Roby/GIGI</span>
-            <a href="https://github.com/GIGI-CodeAce" className='hover:text-green-400 hover:underline'>Github</a>
-            </div><br/><br/>
+            <span className='hover:text-green-400 w-[450%]'>v1.5.2</span>
+            <span className='hover:text-green-400 w-[450%]'>Roby/GIGI</span>
+            <a href="https://github.com/GIGI-CodeAce"
+             className='hover:text-green-400 w-[450%] hover:underline'>Github</a>
+            </div>
         </div>
     )
 }
