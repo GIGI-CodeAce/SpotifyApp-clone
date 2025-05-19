@@ -4,8 +4,7 @@
 </p>
 
 <p align="center">
- <strong>SpotifyApp</strong> — A clone of Spotify’s album tracklist page, built with React, Tailwind CSS, and TypeScript. It uses an API to fetch and display random albums, complete with tracklists and detailed album information.
-</p>
+ <strong>SpotifyApp</strong> — A clone of Spotify’s album tracklist page, showcasing real-time album data. Built using React, TypeScript, Tailwind CSS, and a custom supabase API. Demonstrates responsive design, dynamic data handling, and intuitive UI inspired by Spotify.</p>
 
 <h2 align="center">Visit here</h2>
 
@@ -15,19 +14,14 @@
 
 <h2 align="center">🧐 Features</h2>
 
-<h4>Here're some of the project's best features</h4>
+<h2>Here're some of the project's best features</h2>
 
-**Dynamic Album Fetching:** Random albums with full details are fetched using a custom API.
-
-**Detailed Album Pages:** Displays album covers, artist names, release dates, and complete tracklists.
-
-**Track Playback UI:** An album track list layout mimicking Spotify’s theme.
-
-**Fully Responsive Design:** Optimized with Tailwind CSS for smooth experience across all devices.
-
-**TypeScript Integration:** Strong typing for safer, more maintainable code.
-
-**Custom API Integration:** Backend built to serve random album data to the frontend.
+- **Dynamic Album Fetching:** Random albums with full details are fetched using a custom API.
+- **Detailed Album Pages:** Displays album covers, artist names, release dates, and complete tracklists.
+- **Track Playback UI:** An album track list layout mimicking Spotify’s theme.
+- **Fully Responsive Design:** Optimized with Tailwind CSS for all devices.
+- **TypeScript Integration:** Safer, more maintainable code.
+- **Custom API:** Backend built to serve random album data.
 
   
 <h2 align="center">Project Screenshots:</h2>
@@ -37,6 +31,9 @@
 </div>
 <hr/>
 <img src="./src/mdMedia/loading.png" alt="project-screenshot" width="500" height="550">
+
+## 🪪 License
+This project is licensed under the [MIT License](LICENSE).
 
 </div><br></br>
 
