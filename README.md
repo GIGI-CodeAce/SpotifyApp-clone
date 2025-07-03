@@ -11,6 +11,11 @@
 <div align="center">
   <a href="https://spotifyapp-api.onrender.com">SpotifyApp.onrender.com</a>
 </div>
+<hr/>
+
+<h5 align="center">
+  <u>Note:</u> When visiting this website, the API backend may take up to <u>one minute</u> to fully start due to its hosting setup.
+</h5>
 
 <h2 align="center">🧐 Features</h2>
 
