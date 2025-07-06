@@ -3,10 +3,10 @@ import { getRandomAlbum } from './SpotifyService.js';
 import dotenv from 'dotenv';
 import cors from 'cors';
 
-dotenv.config();
+dotenv.config()
 
-const app = express();
-const PORT = 3000;
+const app = express()
+const PORT = 3000
 
 app.use(cors());
 
@@ -21,4 +21,4 @@ app.get("/api/random-album", async (req, res) => {
 });
 
 
-app.listen(PORT, () => console.log(`🟩 Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`🟩 Server running on http://localhost:${PORT}`))

@@ -43,4 +43,4 @@ const useAlbumData = (): AlbumProps | null => {
   return album;
 };
 
-export default useAlbumData;
+export default useAlbumData

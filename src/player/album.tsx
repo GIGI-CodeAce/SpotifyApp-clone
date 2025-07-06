@@ -76,4 +76,4 @@ const Album = ({ album }: Props) => {
   );
 };
 
-export default Album;
+export default Album

@@ -75,4 +75,4 @@ const TrackList = ({ album }: { album: AlbumProps }) => {
   );
 };
 
-export default TrackList;
+export default TrackList

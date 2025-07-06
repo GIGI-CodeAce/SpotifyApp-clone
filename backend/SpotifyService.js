@@ -2,19 +2,18 @@ import axios from 'axios';
 import dotenv from 'dotenv';
 dotenv.config();
 
-let token = null;
-let tokenExpiresAt = 0;
-const randMarket = ['GB', 'US', 'DE'];
+let token = null
+let tokenExpiresAt = 0
+const randMarket = ['GB', 'US', 'DE']
 
 const getRandomItemFromArray = (array) => {
-  const randomIndex = Math.floor(Math.random() * array.length);
-  return array[randomIndex];
+  const randomIndex = Math.floor(Math.random() * array.length)
+  return array[randomIndex]
 };
 
 async function getAccessToken() {
-  const now = Date.now();
+  const now = Date.now()
 
-  // If we already have a valid token, reuse it
   if (token && now < tokenExpiresAt) return token;
 
   try {
@@ -31,7 +30,7 @@ async function getAccessToken() {
             ).toString("base64"),
         },
       }
-    );
+    )
 
     token = res.data.access_token;
     tokenExpiresAt = now + res.data.expires_in * 1000 - 5000; // 5 second buffer
